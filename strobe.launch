@@ -1,0 +1,6 @@
+<launch>
+	<env name="LD_LIBRARY_PATH" value="$(env WEBOTS_HOME)/resources/projects/robots/nao/aldebaran/naoqi-runtime/lib/:$LD_LIBRARY_PATH" />
+	<node pkg="strobe" type="publisher.py" name="publisher" required="true" />
+	<node pkg="strobe" type="subscriber.py" name="subscriber" required="true" />
+	<node pkg="strobe" type="strobe.py" name="strobe" required="true" />
+</launch>
